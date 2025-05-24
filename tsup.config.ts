@@ -38,5 +38,10 @@ export default defineConfig(config => {
     preset.writePackageJson(package_fields)
   }
 
-  return preset.generateTsupOptions(parsed_options)
+  return preset
+    .generateTsupOptions(parsed_options)
+    .map(option => ({
+      ...option,
+      external: ['obsidian'],
+    }))
 })

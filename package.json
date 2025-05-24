@@ -1,17 +1,17 @@
 {
-  "name": "{{name_of_lib}}",
-  "version": "0.0.0",
-  "description": "{{desc_of_lib}}",
+  "name": "solid-obsidian",
+  "version": "0.1.0",
+  "description": "An unofficial SolidJS port of Obsidian UI components.",
   "license": "MIT",
-  "author": "{{me}}",
+  "author": "Ryota Ushio",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{me}}/{{name_of_lib}}.git"
+    "url": "git+https://github.com/RyotaUshio/solid-obsidian.git"
   },
-  "homepage": "https://github.com/{{me}}/{{name_of_lib}}#readme",
+  "homepage": "https://github.com/RyotaUshio/solid-obsidian#readme",
   "bugs": {
-    "url": "https://github.com/{{me}}/{{name_of_lib}}/issues"
+    "url": "https://github.com/RyotaUshio/solid-obsidian/issues"
   },
   "files": [
     "dist"
@@ -70,6 +70,7 @@
     "eslint-plugin-solid": "^0.14.5",
     "globals": "^16.1.0",
     "jsdom": "^26.1.0",
+    "obsidian": "^1.8.7",
     "prettier": "3.5.3",
     "solid-js": "^1.9.7",
     "tsup": "^8.5.0",
@@ -81,7 +82,8 @@
     "vitest": "^3.1.4"
   },
   "keywords": [
-    "solid"
+    "solid",
+    "obsidian"
   ],
   "packageManager": "pnpm@10.11.0",
   "engines": {
