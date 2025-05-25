@@ -8,6 +8,7 @@ export { default as Button } from './Button';
 export { default as Dropdown } from './Dropdown';
 export { default as Slider, type SliderValueFormat } from './Slider';
 export { default as Color } from './Color';
+export { default as ProgressBar } from './ProgressBar';
 
 export { default as ExternalLink } from './ExternalLink';
 export { default as CodeBlock } from './CodeBlock';
