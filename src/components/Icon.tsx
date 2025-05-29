@@ -3,9 +3,9 @@ import type { IconName } from 'obsidian';
 import type { Component } from 'solid-js';
 
 const Icon: Component<{
-    id: IconName;
+    iconId: IconName;
 }> = props => {
-    return <>{getIcon(props.id)}</>;
+    return <>{getIcon(props.iconId)}</>;
 };
 
 export default Icon;

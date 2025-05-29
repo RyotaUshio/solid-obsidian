@@ -9,13 +9,13 @@ void tooltip;
 
 const ClickableIcon: ParentComponent<
     JSX.HTMLAttributes<HTMLDivElement> & {
-        id: IconName;
+        iconId: IconName;
         isActive?: boolean;
         tooltip?: TooltipConfig;
     }
 > = props => {
     const [local, others] = splitProps(props, [
-        'id',
+        'iconId',
         'isActive',
         'children',
         'classList',
@@ -33,7 +33,7 @@ const ClickableIcon: ParentComponent<
             use:tooltip={local.tooltip}
             {...others}
         >
-            <Icon id={local.id} />
+            <Icon iconId={local.iconId} />
             {local.children}
         </div>
     );

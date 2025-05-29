@@ -38,7 +38,7 @@ const Button: ParentComponent<{
             }}
             use:tooltip={props.tooltip}
         >
-            {props.icon && <Icon id={props.icon} />}
+            {props.icon && <Icon iconId={props.icon} />}
             {props.children}
         </button>
     );

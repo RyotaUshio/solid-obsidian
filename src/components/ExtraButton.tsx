@@ -33,7 +33,7 @@ export default function ExtraButton(props: {
             }}
             use:tooltip={props.tooltip}
         >
-            <Icon id={props.icon ?? 'lucide-settings'} />
+            <Icon iconId={props.icon ?? 'lucide-settings'} />
         </div>
     );
 }
