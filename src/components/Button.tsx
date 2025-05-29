@@ -1,9 +1,9 @@
-import { createSignal } from 'solid-js';
 import type { ParentComponent } from 'solid-js';
-import { tooltip, icon } from '../directives';
+import { createSignal } from 'solid-js';
+import { tooltip } from '../directives';
+import Icon from './Icon';
 
 void tooltip;
-void icon;
 
 const Button: ParentComponent<{
     icon?: string;
@@ -36,9 +36,9 @@ const Button: ParentComponent<{
                 await onClick();
                 setLoading(false);
             }}
-            use:icon={props.icon}
             use:tooltip={props.tooltip}
         >
+            {props.icon && <Icon id={props.icon} />}
             {props.children}
         </button>
     );

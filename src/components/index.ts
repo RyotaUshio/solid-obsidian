@@ -12,3 +12,6 @@ export { default as ProgressBar } from './ProgressBar';
 
 export { default as ExternalLink } from './ExternalLink';
 export { default as CodeBlock } from './CodeBlock';
+
+export { default as Icon } from './Icon';
+export { default as ClickableIcon } from './ClickableIcon';
