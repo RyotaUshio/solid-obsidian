@@ -1,20 +1,27 @@
 import type { IconName } from 'obsidian';
-import type { ParentComponent } from 'solid-js';
+import { splitProps } from 'solid-js';
+import type { JSX, ParentComponent } from 'solid-js';
 import Icon from './Icon';
 
-const ClickableIcon: ParentComponent<{
-    id: IconName;
-    isActive?: boolean;
-}> = props => {
+const ClickableIcon: ParentComponent<
+    JSX.HTMLAttributes<HTMLDivElement> & {
+        id: IconName;
+        isActive?: boolean;
+    }
+> = props => {
+    const [local, others] = splitProps(props, ['id', 'isActive', 'children', 'classList', 'class']);
     return (
         <div
+            class={local.class}
             classList={{
                 'clickable-icon': true,
-                'is-active': props.isActive,
+                'is-active': local.isActive,
+                ...local.classList,
             }}
+            {...others}
         >
-            <Icon id={props.id} />
-            {props.children}
+            <Icon id={local.id} />
+            {local.children}
         </div>
     );
 };
