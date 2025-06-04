@@ -1,4 +1,4 @@
-import { type Ref } from 'solid-js';
+import type { Ref } from 'solid-js';
 
 export default function Toggle(props: {
     value: boolean;
@@ -8,25 +8,6 @@ export default function Toggle(props: {
     ref?: Ref<HTMLDivElement>;
     classList?: Record<string, boolean>;
 }) {
-    // const [on, setOn] = createSignal(props.value);
-    // return (
-    //     <div
-    //         ref={props.ref}
-    //         classList={{
-    //             "checkbox-container": true,
-    //             "is-enabled": on(),
-    //             "is-disabled": props.disabled,
-    //             "mod-small": props.small,
-    //     }} on:click={() => {
-    //         if (!props.disabled) {
-    //             setOn(!on());
-    //             props.onChange?.(on());
-    //         }
-    //     }}>
-    //         <input type="checkbox" tabIndex="0" />
-    //     </div>
-    // );
-
     return (
         <div
             ref={props.ref}

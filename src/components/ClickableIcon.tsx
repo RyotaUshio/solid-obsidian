@@ -1,9 +1,9 @@
+import type { TooltipConfig } from '@/directives';
+import { tooltip } from '@/directives';
 import type { IconName } from 'obsidian';
-import { splitProps } from 'solid-js';
 import type { JSX, ParentComponent } from 'solid-js';
+import { splitProps } from 'solid-js';
 import Icon from './Icon';
-import type { TooltipConfig } from 'src/directives';
-import { tooltip } from 'src/directives';
 
 void tooltip;
 

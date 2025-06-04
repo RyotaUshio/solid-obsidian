@@ -1,6 +1,6 @@
-import { tooltip } from '../directives';
+import type { TooltipConfig } from '@/directives';
+import { tooltip } from '@/directives';
 import type { Ref } from 'solid-js';
-import type { TooltipConfig } from '../directives';
 import Icon from './Icon';
 
 // Even if I use these directives (`use:tooltip`), TypeScript is not smart enough

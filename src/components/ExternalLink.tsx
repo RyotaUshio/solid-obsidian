@@ -1,5 +1,5 @@
 import type { ParentComponent } from 'solid-js';
-import { tooltip } from '../directives';
+import { tooltip } from '@/directives';
 
 void tooltip;
 

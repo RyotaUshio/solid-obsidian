@@ -1,6 +1,6 @@
 import type { ParentComponent } from 'solid-js';
 import { createSignal } from 'solid-js';
-import { tooltip } from '../directives';
+import { tooltip } from '@/directives';
 import Icon from './Icon';
 
 void tooltip;
