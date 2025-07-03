@@ -3,6 +3,7 @@ import type { JSX } from 'solid-js';
 import { render } from 'solid-js/web';
 import type { MountableElement } from 'solid-js/web';
 
+/** @deprecated */
 export abstract class SolidComponent extends Component {
     dispose: (() => void) | null;
     containerEl: MountableElement;

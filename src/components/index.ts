@@ -16,3 +16,5 @@ export { default as CodeBlock } from './CodeBlock';
 export { default as Icon } from './Icon';
 export { default as ClickableIcon } from './ClickableIcon';
 export { default as TextIconButton } from './TextIconButton';
+
+export * from './Markdown';
