@@ -4,6 +4,7 @@ export { default as Toggle } from './Toggle';
 export { default as ExtraButton } from './ExtraButton';
 export { default as Text } from './Text';
 export { default as TextArea } from './TextArea';
+export { default as Search } from './Search';
 export { default as Button } from './Button';
 export { default as Dropdown } from './Dropdown';
 export { default as Slider, type SliderValueFormat } from './Slider';
