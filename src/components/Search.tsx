@@ -1,19 +1,32 @@
 import { children, onMount, splitProps, type JSX } from 'solid-js';
 
-export default function Search(props: JSX.HTMLAttributes<HTMLDivElement> & {
-    value?: string;
-    placeholder?: string;
-    disabled?: boolean;
-    onInput?: (value: string) => unknown;
-    rightDecorator?: JSX.Element;
-    autoSelect?: boolean;
-}) {
+export default function Search(
+    props: JSX.HTMLAttributes<HTMLDivElement> & {
+        value?: string;
+        placeholder?: string;
+        disabled?: boolean;
+        onInput?: (value: string) => unknown;
+        rightDecorator?: JSX.Element;
+        autoSelect?: boolean;
+    },
+) {
     let inputEl: HTMLInputElement | undefined;
-    const [local, other] = splitProps(props, ['value', 'placeholder', 'disabled', 'onInput', 'autoSelect', 'rightDecorator']);
+    const [local, other] = splitProps(props, [
+        'value',
+        'placeholder',
+        'disabled',
+        'onInput',
+        'autoSelect',
+        'rightDecorator',
+    ]);
 
     const rightDecorator = children(() => local.rightDecorator);
     const rightDecoratorEl = rightDecorator.toArray()[0];
-    if (rightDecoratorEl && typeof rightDecoratorEl === 'object' && 'addClass' in rightDecoratorEl) {
+    if (
+        rightDecoratorEl &&
+        typeof rightDecoratorEl === 'object' &&
+        'addClass' in rightDecoratorEl
+    ) {
         (rightDecoratorEl as HTMLElement).addClass('input-right-decorator');
     }
 
@@ -32,10 +45,10 @@ export default function Search(props: JSX.HTMLAttributes<HTMLDivElement> & {
     });
 
     return (
-        <div class='search-input-container' {...other}>
+        <div class="search-input-container" {...other}>
             <input
-                type='search'
-                enterkeyhint='search'
+                type="search"
+                enterkeyhint="search"
                 spellcheck={false}
                 placeholder={local.placeholder}
                 disabled={local.disabled}
@@ -44,7 +57,7 @@ export default function Search(props: JSX.HTMLAttributes<HTMLDivElement> & {
                 ref={inputEl}
             />
             <div
-                class='search-input-clear-button'
+                class="search-input-clear-button"
                 on:mousedown={e => e.preventDefault()}
                 on:click={() => {
                     if (local.disabled) return;
