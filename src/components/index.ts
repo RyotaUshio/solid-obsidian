@@ -19,3 +19,5 @@ export { default as ClickableIcon } from './ClickableIcon';
 export { default as TextIconButton } from './TextIconButton';
 
 export * from './Markdown';
+export { default as RenderResults } from './RenderResults';
+export { default as Instructions } from './Instructions';
